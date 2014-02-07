@@ -84,3 +84,12 @@ var STEPS = (function(obj) {
 
   return obj;
 }(STEPS || {}));
+
+// load script after page loaded
+$(window).bind('load', function() {
+  // create variable modal
+  var modal = new STEPS.Modal('.modalwindow', '.modaloverlay', 1, '.modalwindow-close');
+  // init pop up window
+  // modal.init(7, 'cookieName') - in parentheses type how many days pop-up window should not appear and cookie name 
+  modal.init(7, 'modal_window');
+});
